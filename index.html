@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff7ef">
+  <meta name="description" content="Bright Bassey | Virtual Assistant, Administrative Assistant and Operations Support Specialist">
+  <title>Bright Bassey | Operations & Administrative Support</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="bg" aria-hidden="true"></canvas>
+  <div class="noise" aria-hidden="true"></div>
+
+  <nav id="nav">
+    <a class="nav-logo" href="#home">Bright Bassey</a>
+    <div class="nav-links">
+      <a href="#about">About</a><a href="#experience">Experience</a><a href="#skills">Skills</a>
+      <a href="#projects">Projects</a><a href="#education">Education</a><a href="#resume">Resume</a><a href="#contact">Contact</a>
+    </div>
+    <div class="nav-status"><span></span><b id="navAvailability">Available</b></div>
+  </nav>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-media"><img id="heroImage" src="assets/bright.jpg" alt="Bright Bassey portrait"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-inner">
+        <div class="hero-kicker reveal"><span></span><span id="heroStatus">OPEN TO REMOTE</span></div>
+        <h1 class="hero-name reveal">Bright <em>Bassey</em></h1>
+        <p class="hero-role reveal" id="heroTitle">Virtual Assistant · Administrative Assistant · Operations Support Specialist</p>
+        <div class="hero-bottom">
+          <p class="hero-desc reveal" id="heroIntro">I optimize complex operations by providing proactive administrative, research, documentation, and coordination support, enabling organizations to increase efficiency and achieve key objectives.</p>
+          <div class="hero-cta reveal">
+            <a class="btn btn-fill" href="#projects">View Work</a>
+            <a class="btn btn-outline" href="#contact">Let's Connect</a>
+          </div>
+        </div>
+        <div class="stats-row reveal" id="heroStats"></div>
+      </div>
+    </section>
+
+    <section id="about" class="section light">
+      <div class="section-inner about-grid">
+        <div class="about-visual reveal">
+          <div class="orbit-ring"><div class="orbit-inner"><img src="assets/bright.jpg" alt="Bright Bassey"></div></div>
+          <div class="orbit-label">Structure · Clarity · Execution</div>
+        </div>
+        <div class="about-copy reveal">
+          <div class="eyebrow">About me</div>
+          <h2>Support that makes <em>work move.</em></h2>
+          <p class="quote" id="aboutLead">I bring clarity, structure, and reliable support to busy people and growing businesses.</p>
+          <p id="aboutBody">I have remote experience in administration, customer support, research, documentation, and workflow coordination. From managing communications and schedules to organizing information, maintaining systems, and coordinating day-to-day operations, I help turn busy workflows into organized, efficient processes.</p>
+          <div class="chip-cloud" id="skillChips"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section warm">
+      <div class="section-inner">
+        <div class="eyebrow reveal">Professional journey</div>
+        <div class="heading-row"><h2 class="reveal">Experience, <em>with intent.</em></h2><div class="carousel-counter reveal"><b id="expCurrent">01</b><span>/</span><span id="expTotal">03</span></div></div>
+        <div class="carousel-shell reveal">
+          <div class="carousel-track" id="experienceTrack"></div>
+        </div>
+        <div class="carousel-controls"><div class="dots" id="expDots"></div><div class="arrows"><button id="prevExp" aria-label="Previous experience">←</button><button id="nextExp" aria-label="Next experience">→</button></div></div>
+      </div>
+    </section>
+
+    <section id="skills" class="section light">
+      <div class="section-inner">
+        <div class="eyebrow reveal">Capabilities</div>
+        <h2 class="reveal">Tools for <em>good work.</em></h2>
+        <div class="skills-bento" id="skillsBento"></div>
+      </div>
+    </section>
+
+    <section id="projects" class="section warm">
+      <div class="section-inner">
+        <div class="eyebrow reveal">Selected work</div>
+        <div class="heading-row"><h2 class="reveal">Practical systems, <em>thoughtfully organized.</em></h2><p class="section-note reveal">A few samples of how I organize information, workflows and communication.</p></div>
+        <div class="projects-grid" id="projectsGrid"></div>
+      </div>
+    </section>
+
+    <section id="education" class="section light">
+      <div class="section-inner">
+        <div class="eyebrow reveal">Credentials</div>
+        <h2 class="reveal">Education & <em>foundation.</em></h2>
+        <div class="credential-grid" id="educationGrid"></div>
+      </div>
+    </section>
+
+    <section id="resume" class="resume-section">
+      <div class="section-inner">
+        <div class="eyebrow resume-eyebrow reveal">Curriculum vitae</div>
+        <h2 class="resume-title reveal">Two formats, <em>ready to go.</em></h2>
+        <div class="resume-card reveal">
+          <div class="resume-card-inner">
+            <div class="resume-meta">
+              <span class="resume-tag">Resume manager</span>
+              <h3 id="resumeName">Bright Bassey</h3>
+              <p id="resumeSub">Virtual Assistant · Administrative Assistant · Operations Support Specialist</p>
+            </div>
+            <div class="resume-stats" id="resumeStats"></div>
+            <div class="resume-buttons" id="resumeButtons"></div>
+            <p class="resume-note">Current files are managed from the private admin dashboard.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section warm">
+      <div class="section-inner contact-grid">
+        <div class="reveal">
+          <div class="eyebrow">Get in touch</div>
+          <h2>Let's make work <em>flow.</em></h2>
+          <p class="contact-tag" id="contactTag">Available for remote roles in operations, administrative and customer support.</p>
+          <div class="contact-chips" id="contactChips"></div>
+        </div>
+        <div class="contact-art reveal"><div class="contact-circle"><div class="contact-orbit"><span></span></div><strong>Structure,<br>clarity,<br>execution.</strong></div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>© <span id="year"></span> Bright Bassey</span><span>Operations · Administration · Customer Support</span></footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

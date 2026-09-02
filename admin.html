@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bright Bassey | Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <div id="loginView" class="center-card">
+    <div class="brand-mark">BB</div>
+    <h1>Portfolio admin</h1><p>Sign in to update the live website.</p>
+    <form id="loginForm"><input id="email" type="email" placeholder="Email" required><input id="password" type="password" placeholder="Password" required><button>Sign in</button><small id="loginMsg"></small></form>
+  </div>
+  <div id="appView" class="hidden">
+    <header class="admin-header"><div><div class="eyebrow">Content management</div><h1>Bright Bassey</h1></div><div class="header-actions"><a href="index.html" target="_blank">View site ↗</a><button id="signOut" class="secondary">Sign out</button></div></header>
+    <main class="admin-layout">
+      <aside class="sidebar"><button class="tab active" data-tab="overview">Overview</button><button class="tab" data-tab="profile">Profile</button><button class="tab" data-tab="experience">Experience</button><button class="tab" data-tab="skills">Skills</button><button class="tab" data-tab="projects">Projects</button><button class="tab" data-tab="education">Education</button><button class="tab" data-tab="resume">Resume</button><button class="tab" data-tab="contact">Contact</button></aside>
+      <section class="content">
+        <div id="toast" class="toast"></div>
+        <div class="panel active" data-panel="overview"><h2>Portfolio dashboard</h2><p class="muted">Use the tabs to edit the live portfolio. Changes are saved to Supabase and picked up by the public site.</p><div class="stat-grid" id="overviewStats"></div></div>
+
+        <div class="panel" data-panel="profile"><h2>Profile</h2><form id="profileForm" class="form-grid"></form></div>
+        <div class="panel" data-panel="experience"><div class="panel-head"><div><h2>Experience</h2><p class="muted">Newest role first.</p></div><button id="addExperience">+ Add experience</button></div><div id="experienceList" class="item-list"></div></div>
+        <div class="panel" data-panel="skills"><div class="panel-head"><div><h2>Skills</h2><p class="muted">Group capabilities into clean cards.</p></div><button id="addSkill">+ Add skill</button></div><div id="skillsList" class="item-list"></div></div>
+        <div class="panel" data-panel="projects"><div class="panel-head"><div><h2>Projects</h2><p class="muted">Notion and external links open directly from the public site.</p></div><button id="addProject">+ Add project</button></div><div id="projectsList" class="item-list"></div></div>
+        <div class="panel" data-panel="education"><div class="panel-head"><div><h2>Education</h2><p class="muted">Add qualifications and certifications here later.</p></div><button id="addEducation">+ Add credential</button></div><div id="educationList" class="item-list"></div></div>
+        <div class="panel" data-panel="resume"><div class="panel-head"><div><h2>Resume manager</h2><p class="muted">Upload, replace, preview, download or delete PDF and DOCX files.</p></div></div><div class="resume-uploader"><label>PDF resume<input id="pdfFile" type="file" accept="application/pdf"></label><button id="uploadPdf">Upload / Replace PDF</button><label>DOCX resume<input id="docxFile" type="file" accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document"></label><button id="uploadDocx">Upload / Replace DOCX</button></div><div id="resumeList" class="item-list"></div></div>
+        <div class="panel" data-panel="contact"><h2>Contact</h2><form id="contactForm" class="form-grid"></form></div>
+      </section>
+    </main>
+  </div>
+  <script type="module" src="admin.js"></script>
+</body>
+</html>
