@@ -2,4 +2,6 @@
 
 MoneyMap is a personal finance tracker powered by Supabase.
 
-This directory is reserved for the MoneyMap application. The existing portfolio application remains outside this directory.
+The MoneyMap application lives in this directory. The existing portfolio application remains outside this directory.
+
+Deployment source: GitHub main branch.
