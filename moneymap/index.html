@@ -16,7 +16,7 @@ const URL="https://mqtauhmzsjfjfcfqppdm.supabase.co";
 const KEY="sb_publishable_6YyswjIgsHpsu--SMVv2bA_TTtTp3MH";
 const root=document.getElementById("root"), modalEl=document.getElementById("modal");
 let token=null,user=null,view="dashboard",month=new Date(),txSearch="",txType="",txAccount="",txCategory="";
-let data={accounts:[],categories:[],transactions:[],budgets:[],goals:[]};
+let data={accounts:[],categories:[],transactions:[],budgets:[],goals:[],reportTransactions:[]};
 const $=id=>document.getElementById(id);
 const money=n=>new Intl.NumberFormat("en-NG",{style:"currency",currency:"NGN",maximumFractionDigits:0}).format(Number(n)||0);
 const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -45,6 +45,7 @@ async function load(){
   data.transactions=await api("transactions?select=*&transaction_date=gte."+monthStart()+"&transaction_date=lte."+monthEnd()+"&order=transaction_date.desc")||[];
   data.budgets=await api("budgets?select=*&period_start=gte."+monthStart()+"&period_start=lt."+new Date(month.getFullYear(),month.getMonth()+1,1).toISOString().slice(0,10))||[];
   data.goals=await api("goals?select=*&order=created_at.desc")||[];
+  data.reportTransactions=await reportRange(3);
 }
 function saveSession(s){token=s.access_token;user=s.user;localStorage.setItem("moneymap_session",JSON.stringify(s))}
 function clearSession(){token=null;user=null;localStorage.removeItem("moneymap_session")}
